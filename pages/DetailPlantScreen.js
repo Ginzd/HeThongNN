@@ -24,6 +24,7 @@ const DetailPlantScreen = () => {
             source={{
               uri: "https://img.icons8.com/external-wanicon-flat-wanicon/2x/external-coffee-plant-coffee-shop-wanicon-flat-wanicon.png",
             }}
+            
           />
           <Text style={styles.info}>Nhật kí sản xuất</Text>
         </View>
