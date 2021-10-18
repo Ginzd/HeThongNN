@@ -28,7 +28,7 @@ const AddPlantScreen = () => {
         placeholder="Dien tich"
         keyboardType="numeric"
       />
-      <Text style={styles.labelText}>Mua vu</Text>
+      <Text style={styles.labelText}>Mùa vụ</Text>
       <Text style={styles.simpleText}>Giong cay</Text>
 
       <RNPickerSelect
