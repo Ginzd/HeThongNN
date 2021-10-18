@@ -15,7 +15,7 @@ const AddPlantScreen = () => {
 
   return (
     <View style={styles.dropdownn}>
-      <Text style={styles.labelText}>Vi tri canh tac</Text>
+      <Text style={styles.labelText}>Vị trí canh tác</Text>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
