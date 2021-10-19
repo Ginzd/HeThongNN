@@ -89,7 +89,7 @@ const ListScreen = () => {
       justifyContent: 'center',
       width: 70,
       position: 'absolute',
-      bottom: 10,
+      bottom: 50,
       right: 10,
       height: 70,
       backgroundColor: '#fff',

@@ -8,31 +8,30 @@ const AddPlantScreen = () => {
   const [date, setDate] = useState("09-10-2020");
 
   return (
-    <View style={styles.dropdownn}>
+    <View  style={styles.viewstyle} behavior="padding">
       <Text style={styles.labelText}>Vị trí canh tác</Text>
       <View style={styles.rowContainer}>
         <Text style={styles.text}>Địa điểm</Text>
         <TextInput
-          style={styles.textInput}
           style={styles.input}
           onChangeText={onChangeText}
           value={text}
+          placeholder="..."
         />
       </View>
+
       <View style={styles.rowContainer}>
         <Text style={styles.text}>Diện tích</Text>
         <TextInput
-          style={styles.textInput}
           style={styles.input}
           onChangeText={onChangeText}
-          value={text}
+          placeholder="..."
         />
       </View>
-
       <Text style={styles.labelText}>Mùa vụ</Text>
 
       <View style={styles.rowContainer}>
-        <Text style={styles.simpleText}>Giống cây</Text>
+        <Text style={styles.text}>Giống cây</Text>
         <View style={styles.rowContainerPicker}>
           <RNPickerSelect
             placeholder={{ label: "Lựa chọn cây", value: null }}
@@ -45,8 +44,9 @@ const AddPlantScreen = () => {
           />
         </View>
       </View>
+
       <View style={styles.rowContainer}>
-        <Text style={styles.simpleText}>Ngày bắt đầu</Text>
+        <Text style={styles.text}>Ngày bắt đầu</Text>
         <DatePicker
           style={styles.datePickerStyle}
           date={date} // Initial date from state
@@ -54,7 +54,7 @@ const AddPlantScreen = () => {
           placeholder="select date"
           format="DD-MM-YYYY"
           minDate="01-01-2016"
-          maxDate="01-01-2019"
+          maxDate="01-01-2055"
           confirmBtnText="Confirm"
           cancelBtnText="Cancel"
           customStyles={{
@@ -78,15 +78,15 @@ const AddPlantScreen = () => {
       <View style={styles.rowContainer}>
         <Text style={styles.text}>Số lượng trồng</Text>
         <TextInput
-          style={styles.textInput}
           style={styles.input}
           onChangeText={onChangeNumber}
           value={number}
+          placeholder="..."
         />
       </View>
 
       <View style={styles.rowContainer}>
-        <Text style={styles.simpleText}>Đơn vị tính</Text>
+        <Text style={styles.text}>Đơn vị tính</Text>
         <View style={styles.rowContainerPicker}>
           <RNPickerSelect
             placeholder={{ label: "Select ....", value: null }}
@@ -104,8 +104,8 @@ const AddPlantScreen = () => {
         <TextInput
           style={styles.input}
           multiline={true}
-          numberOfLines={3}
-          placeholder="Ghi chú"
+          numberOfLines={2}
+          placeholder="..."
         />
       </View>
 
@@ -116,43 +116,34 @@ const AddPlantScreen = () => {
 
 const styles = StyleSheet.create({
   rowContainer: {
-    flex: 1,
+    flex: 3,
     flexDirection: "row",
-
     alignItems: "center",
   },
   rowContainerPicker: {
-    width: 375,
+    width: 200,
     paddingLeft: 25,
   },
   text: {
     flex: 1,
-    paddingLeft: 10,
     paddingTop: 12,
   },
-  textInput: {
-    flex: 1,
-    backgroundColor: "white",
-    borderColor: "black",
-  },
   input: {
-    height: 30,
-    width: 350,
-    margin: 12,
+    flex: 2,
+    borderColor: "black",
     borderWidth: 1,
-    padding: 10,
   },
   labelText: {
     fontSize: 17,
     fontWeight: "bold",
-    margin: 12,
+    paddingBottom: 20,
   },
-  simpleText: {
-    fontSize: 15,
+  viewstyle: {
     margin: 12,
-  },
-  dropdownn: {
-    margin: 12,
+    flex: 1,
+    flexDirection: "column",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
   },
   scrollContainer: {
     flex: 1,
