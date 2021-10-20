@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-const Environment = () => {
+const EnvironmentlogScreen = () => {
     return (
         <View>
             <Text>Nhat ki moi truong</Text>
@@ -9,4 +9,4 @@ const Environment = () => {
     )
 }
 
-export default Environment
+export default EnvironmentlogScreen

@@ -44,14 +44,13 @@ const ListScreen = () => {
 
  
     <FlatList
-      style={styles.root}
       data={list}
       extraData={list}
       ItemSeparatorComponent={() => {
         return <View style={styles.separator} />;
       }}
       keyExtractor={(item) => {
-        return item.id;
+        return item.id.toString();
       }}
       renderItem={(item) => {
         const Notification = item.item;
