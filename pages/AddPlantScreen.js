@@ -50,10 +50,8 @@ const AddPlantScreen = () => {
         <DatePicker
           style={styles.datePickerStyle}
           date={date} // Initial date from state
-
           placeholder="select date"
           format="DD-MM-YYYY"
-
           confirmBtnText="Confirm"
           cancelBtnText="Cancel"
          onDateChange={(d) => setDate(d)}
